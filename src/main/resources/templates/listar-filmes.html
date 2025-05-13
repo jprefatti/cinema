@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Filmes Cadastrados</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="p-4">
+    <button id="toggle-tema" class="btn btn-outline-secondary">Alternar Tema</button>
+
+  <h1>Filmes Cadastrados</h1>
+
+  <!-- Formulário de cadastro -->
+  <form id="form-cadastrar-filme" class="form-inline mb-4">
+    <input id="titulo" class="form-control mr-2" placeholder="Título" required>
+    <input id="genero" class="form-control mr-2" placeholder="Gênero" required>
+    <input type="number" id="anoLancamento" class="form-control mr-2" placeholder="Ano" required>
+    <button class="btn btn-success">Cadastrar</button>
+  </form>
+
+  <!-- Tabela de filmes -->
+  <table class="table table-striped">
+    <thead>
+      <tr><th>Título</th><th>Gênero</th><th>Ano</th><th>Ações</th></tr>
+    </thead>
+    <tbody id="filmes-tbody"></tbody>
+  </table>
+
+  <!-- Modal de edição -->
+  <div class="modal fade" id="modal-editar" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Editar Filme</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <form id="form-editar-filme">
+          <div class="modal-body">
+            <input type="hidden" id="edit-id">
+            <div class="form-group">
+              <label>Título</label>
+              <input id="edit-titulo" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label>Gênero</label>
+              <input id="edit-genero" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label>Ano</label>
+              <input type="number" id="edit-anoLancamento" class="form-control" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/script.js"></script>
+</body>
+</html>

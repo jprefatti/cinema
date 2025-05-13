@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cadastrar Filme</title>
+</head>
+<body>
+    <button id="toggle-tema" class="btn btn-outline-secondary">Alternar Tema</button>
+    <h1>Cadastrar Filme</h1>
+    <form th:action="@{/filmes}" th:object="${filme}" method="post">
+        <input type="text" th:field="*{titulo}" placeholder="Título">
+        <textarea th:field="*{sinopse}" placeholder="Sinopse"></textarea>
+        <input type="text" th:field="*{genero}" placeholder="Gênero">
+        <input type="number" th:field="*{anoLancamento}" placeholder="Ano">
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
