@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+    
 <head>
     <title>Cadastrar Filme</title>
 </head>
+
 <body>
     <button id="toggle-tema" class="btn btn-outline-secondary">Alternar Tema</button>
-    <h1>Cadastrar Filme</h1>
+    <h1>CADASTRAR FILME</h1>
     <form th:action="@{/filmes}" th:object="${filme}" method="post">
         <input type="text" th:field="*{titulo}" placeholder="Título">
         <textarea th:field="*{sinopse}" placeholder="Sinopse"></textarea>
