@@ -7,7 +7,7 @@ $(document).ready(function() {
     ativarTemaEscuro();
   }
 
-  // Alternar tema
+  // Alternar tema escuro/claro
   $('#toggle-tema').click(function() {
     $('body').toggleClass('bg-dark text-white');
     $('table').toggleClass('table-dark');
